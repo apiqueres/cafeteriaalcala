@@ -43,13 +43,6 @@
     revealObs.observe(el);
   });
 
-  /* ---------- Capítulo activo ---------- */
-  const tag = $('#chapterNum');
-  const chapObs = new IntersectionObserver((entries) => {
-    entries.forEach((e) => { if (e.isIntersecting) tag.textContent = e.target.dataset.chapter; });
-  }, { rootMargin: '-45% 0px -45% 0px' });
-  $$('.stage').forEach((s) => chapObs.observe(s));
-
   /* ---------- Intro ---------- */
   const intro = $('#intro');
   let introDone = false;

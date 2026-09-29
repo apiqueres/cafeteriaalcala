@@ -162,12 +162,10 @@ iframe { border: 0; display: block; }
 
 .call-btn { position: fixed; left: 26px; bottom: 26px; z-index: 70; color: var(--bordeaux); }
 .call-btn svg { transform: rotate(-8deg); }
-.chapter-tag { position: fixed; right: 26px; bottom: 30px; z-index: 70; font-variant-numeric: tabular-nums; }
-.chapter-tag__sep { margin: 0 .35em; opacity: .5; }
 
 @media (max-width: 640px) {
   .brand { top: 12px; left: 14px; } .brand__badge { width: 48px; height: 48px; } .brand__badge img { width: 36px; } .brand__text { display: none; }
-  .menu-btn { top: 12px; right: 14px; } .call-btn { left: 14px; bottom: 14px; width: 54px; height: 54px; } .chapter-tag { right: 14px; bottom: 18px; }
+  .menu-btn { top: 12px; right: 14px; } .call-btn { left: 14px; bottom: 14px; width: 54px; height: 54px; }
   .frame { display: none; }
   .stage { padding-left: .75rem; padding-right: .75rem; }
 }
