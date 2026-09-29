@@ -218,9 +218,8 @@ iframe { border: 0; display: block; }
 .stage__bg { position: absolute; inset: 0; z-index: -1; overflow: clip; }
 .stage__sticky { position: sticky; top: 0; height: 100svh; overflow: hidden; }
 .stage__paint { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transform: translateY(var(--py, 0)) scale(1.12); transition: transform .12s linear; }
-.stage__vignette { position: absolute; inset: 0; z-index: 1; background: radial-gradient(80% 70% at 50% 40%, transparent 30%, rgba(15,20,25,.75) 100%), linear-gradient(180deg, rgba(15,20,25,.45), transparent 30%, transparent 70%, rgba(15,20,25,.6)); }
-.stage__vignette--soft { background: radial-gradient(80% 70% at 50% 40%, rgba(15,20,25,.2) 30%, rgba(15,20,25,.8) 100%), linear-gradient(180deg, rgba(15,20,25,.55), transparent 35%); }
-.stage__vignette--warm { background: radial-gradient(80% 70% at 50% 40%, rgba(60,30,10,.15) 30%, rgba(40,20,10,.7) 100%), linear-gradient(180deg, rgba(40,20,10,.5), transparent 35%); }
+.stage__vignette { position: absolute; inset: 0; z-index: 1; background: none; }
+.stage__vignette--soft, .stage__vignette--warm { background: none; }
 .stage__head { text-align: center; margin-bottom: 2.4rem; display: grid; gap: .6rem; justify-items: center; }
 .stage__title { font-size: clamp(3rem, 9vw, 7rem); }
 .stage__next { margin-top: 3rem; }
