@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cafetería Alcalá · Cullera</title>
+  <meta name="description" content="Cafetería Alcalá, tu punto de encuentro en Cullera desde 1987. Desayunos, carta, cafés, cervezas, vinos y cócteles.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100,400;100,500;100,600;125,700;125,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="assets/logo-exterior.png">
+</head>
+<body>
+
+  <!-- Filtro SVG para bordes "recortados a mano" -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <filter id="rough" x="-5%" y="-10%" width="110%" height="120%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.028" numOctaves="3" seed="7" result="n"/>
+        <feDisplacementMap in="SourceGraphic" in2="n" scale="7" xChannelSelector="R" yChannelSelector="G"/>
+      </filter>
+      <filter id="rough-soft" x="-5%" y="-10%" width="110%" height="120%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" seed="3" result="n"/>
+        <feDisplacementMap in="SourceGraphic" in2="n" scale="4" xChannelSelector="R" yChannelSelector="G"/>
+      </filter>
+    </defs>
+  </svg>
+
+  <!-- ===== INTRO ===== -->
+  <div class="intro" id="intro" aria-hidden="true">
+    <div class="intro__bg"></div>
+    <div class="banner intro__banner">
+      <div class="banner__strip"></div>
+      <div class="banner__body">
+        <p class="kicker kicker--light">Cullera · desde 1987</p>
+        <h2 class="t3d t3d--cream intro__line" data-split>Bienvenidos a</h2>
+        <h1 class="t3d t3d--gold intro__title" data-split>ALCALÁ</h1>
+        <p class="intro__sub">Cafetería · Baristas</p>
+      </div>
+    </div>
+    <button class="intro__skip" id="introSkip" type="button">Saltar intro <span class="chev">›</span></button>
+  </div>
+
+  <!-- ===== CORTINA DE TRANSICIÓN ===== -->
+  <div class="curtain" id="curtain" aria-hidden="true">
+    <div class="banner curtain__banner"><div class="banner__strip"></div></div>
+  </div>
+
+  <!-- ===== MARCO DE PAPEL RASGADO ===== -->
+  <picture class="frame" aria-hidden="true">
+    <source media="(orientation: portrait)" srcset="assets/frame-torn-portrait.webp">
+    <img src="assets/frame-torn.webp" alt="">
+  </picture>
+
+  <!-- ===== UI FIJA ===== -->
+  <a href="#inicio" class="brand" data-nav aria-label="Cafetería Alcalá, inicio">
+    <span class="brand__badge"><img src="assets/logo-blanco.webp" alt=""></span>
+    <span class="brand__text">Cafetería<br>Baristas</span>
+  </a>
+
+  <button class="paper-btn paper-btn--oval menu-btn" id="menuBtn" type="button" aria-label="Abrir menú" aria-expanded="false">
+    <span class="menu-btn__lines"><i></i><i></i><i></i></span>
+  </button>
+
+  <a href="tel:+34961725098" class="paper-btn paper-btn--round call-btn" aria-label="Llamar al 961 72 50 98">
+    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+  </a>
+
+  <div class="chapter-tag paper-btn paper-btn--tag" id="chapterTag" aria-live="polite">
+    <span id="chapterNum">00</span><span class="chapter-tag__sep">/</span><span>03</span>
+  </div>
+
+  <!-- ===== MENÚ A PANTALLA COMPLETA ===== -->
+  <nav class="menu" id="menu" aria-hidden="true">
+    <div class="banner menu__banner">
+      <div class="banner__strip"></div>
+      <div class="banner__body menu__body">
+        <p class="kicker kicker--light">Capítulos</p>
+        <ul class="menu__list">
+          <li><a href="#inicio" data-nav class="menu__link"><small>00</small><span class="t3d t3d--cream" data-split>Inicio</span></a></li>
+          <li><a href="#carta" data-nav class="menu__link"><small>01</small><span class="t3d t3d--cream" data-split>La carta</span></a></li>
+          <li><a href="#reservas" data-nav class="menu__link"><small>02</small><span class="t3d t3d--cream" data-split>Reservar</span></a></li>
+          <li><a href="#contacto" data-nav class="menu__link"><small>03</small><span class="t3d t3d--cream" data-split>Contacto</span></a></li>
+        </ul>
+        <div class="menu__foot">
+          <a href="tel:+34961725098">961 72 50 98</a>
+          <span>·</span>
+          <a href="https://www.instagram.com/cafeteriaalcala" target="_blank" rel="noopener">@cafeteriaalcala</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ===== CAPÍTULO 00 · INICIO ===== -->
+    <section id="inicio" class="stage stage--hero" data-chapter="00">
+      <div class="stage__bg">
+        <video class="hero__video" autoplay muted loop playsinline poster="assets/hero-tiles.jpg" aria-hidden="true">
+          <source src="assets/hero-loop.mp4" type="video/mp4">
+        </video>
+        <div class="stage__vignette"></div>
+      </div>
+
+      <div class="hero__content" id="heroContent">
+        <div class="banner hero__banner tilt" data-tilt>
+          <div class="banner__strip"></div>
+          <div class="banner__body">
+            <p class="kicker kicker--light reveal">3ª generación · Cullera · Desde 1987</p>
+            <h1 class="t3d t3d--gold hero__title" data-split>ALCALÁ</h1>
+            <p class="hero__sub reveal">Cafetería · Baristas</p>
+          </div>
+          <span class="banner__pin banner__pin--l"></span>
+          <span class="banner__pin banner__pin--r"></span>
+        </div>
+
+        <p class="hero__lead reveal">Tu punto de encuentro en la playa de Cullera. Desayunos, comidas, cenas y copas con cocina ininterrumpida de 8:00 a 23:30.</p>
+
+        <div class="hero__cta reveal">
+          <a href="#carta" data-nav class="paper-btn paper-btn--pill">Ver la carta</a>
+          <a href="#reservas" data-nav class="chev-link">Reservar mesa <span class="chev">›</span></a>
+        </div>
+      </div>
+
+      <div class="note note--hero reveal" aria-hidden="true">
+        <p>Primera cafetería de la Comunidad Valenciana con desfibrilador.<br>Tercera generación de hosteleros.</p>
+      </div>
+    </section>
+
+    <!-- ===== CAPÍTULO 01 · LA CARTA ===== -->
+    <section id="carta" class="stage stage--carta" data-chapter="01">
+      <div class="stage__bg stage__bg--parallax">
+        <div class="stage__sticky">
+          <img src="assets/paint-interior.jpg" alt="" class="stage__paint">
+          <div class="stage__vignette stage__vignette--soft"></div>
+        </div>
+      </div>
+
+      <header class="stage__head">
+        <p class="kicker kicker--light reveal">Capítulo 01</p>
+        <h2 class="t3d t3d--cream stage__title" data-split>La carta</h2>
+        <a href="#promos" data-nav class="chev-link chev-link--light reveal">Explorar <span class="chev">›</span></a>
+      </header>
+
+      <!-- Promociones -->
+      <div class="banner promos tilt-in" id="promos">
+        <div class="banner__strip"></div>
+        <div class="banner__body">
+          <div class="promos__head">
+            <p class="kicker kicker--light">Promociones</p>
+            <h3 class="t3d t3d--cream promos__title" data-split>Ibéricos &amp; quesos</h3>
+            <p class="promos__text">Cortados y envasados a mano por cortadores profesionales.</p>
+          </div>
+          <div class="promos__grid" id="promosGrid"></div>
+        </div>
+      </div>
+
+      <!-- Tarjeta de papel con la carta -->
+      <div class="paper carta-card tilt-in" id="cartaCard">
+        <div class="paper__band paper__band--top"></div>
+        <div class="paper__inner">
+
+          <div class="menu-tabs" id="menuTabs">
+            <div class="menu-tabs__groups" role="tablist" aria-label="Tipo de carta">
+              <button class="tab is-active" data-group="comida" role="tab" aria-selected="true">Comida</button>
+              <button class="tab" data-group="bebida" role="tab" aria-selected="false">Bebidas</button>
+            </div>
+            <div class="menu-tabs__pills" id="menuPills"></div>
+          </div>
+
+          <div class="menu-content" id="menuContent"></div>
+
+          <div class="allergens">
+            <h4 class="allergens__title">Alérgenos</h4>
+            <p>Nuestra carta identifica los alérgenos de cada plato. Si eres celíaco o tienes cualquier intolerancia, díselo a nuestro equipo. Las hamburguesas sin gluten tienen un suplemento de pan de 1,20 €.</p>
+            <ul class="allergens__list">
+              <li>Gluten</li><li>Crustáceos</li><li>Huevos</li><li>Pescado</li><li>Cacahuetes</li><li>Soja</li><li>Lácteos</li>
+              <li>Frutos de cáscara</li><li>Apio</li><li>Mostaza</li><li>Sésamo</li><li>Sulfitos</li><li>Altramuces</li><li>Moluscos</li>
+            </ul>
+          </div>
+        </div>
+        <div class="paper__band paper__band--bottom"></div>
+      </div>
+
+    </section>
+
+    <!-- ===== CAPÍTULO 02 · RESERVAS ===== -->
+    <section id="reservas" class="stage stage--reservas" data-chapter="02">
+      <div class="stage__bg stage__bg--parallax">
+        <div class="stage__sticky">
+          <img src="assets/paint-terraza.jpg" alt="" class="stage__paint">
+          <div class="stage__vignette stage__vignette--warm"></div>
+        </div>
+      </div>
+
+      <header class="stage__head">
+        <p class="kicker kicker--light reveal">Capítulo 02</p>
+        <h2 class="t3d t3d--cream stage__title" data-split>Reservar</h2>
+        <p class="stage__lead reveal">Guarda tu mesa en Alcalá. Te confirmamos la reserva en cuanto la recibamos.</p>
+      </header>
+
+      <div class="paper booking tilt-in" id="booking">
+        <div class="paper__band paper__band--top"></div>
+        <div class="paper__inner">
+          <form class="booking__form" id="bookingForm" novalidate>
+            <div class="booking__intro">
+              <h3 class="t3d t3d--tile booking__title" data-split>Reserva tu mesa</h3>
+              <p>Rellena tus datos y elige día y hora. Para grupos de más de 10 personas, llámanos directamente.</p>
+            </div>
+
+            <div class="booking__grid">
+              <label class="field"><span class="field__label">Nombre</span><input type="text" name="nombre" placeholder="Tu nombre" required autocomplete="name"></label>
+              <label class="field"><span class="field__label">Teléfono</span><input type="tel" name="telefono" placeholder="600 000 000" required autocomplete="tel"></label>
+              <label class="field field--wide"><span class="field__label">Email</span><input type="email" name="email" placeholder="nombre@email.com" autocomplete="email"></label>
+              <label class="field"><span class="field__label">Día</span><input type="date" name="dia" required></label>
+              <label class="field"><span class="field__label">Hora</span><input type="time" name="hora" min="08:00" max="23:30" step="900" required></label>
+              <label class="field"><span class="field__label">Personas</span>
+                <select name="personas" required>
+                  <option value="">Elige</option>
+                  <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option>
+                </select>
+              </label>
+              <label class="field"><span class="field__label">Zona</span>
+                <select name="zona">
+                  <option value="Sin preferencia">Sin preferencia</option>
+                  <option>Interior</option>
+                  <option>Terraza</option>
+                </select>
+              </label>
+              <label class="field field--wide"><span class="field__label">Comentarios</span><textarea name="comentarios" rows="3" placeholder="Alergias, cumpleaños, trona, mascotas…"></textarea></label>
+            </div>
+
+            <p class="booking__error" id="bookingError" hidden>Revisa los campos marcados: nombre, teléfono, día, hora y personas son obligatorios.</p>
+
+            <div class="booking__actions">
+              <button type="submit" class="paper-btn paper-btn--pill paper-btn--orange">Reservar ahora</button>
+              <a href="tel:+34961725098" class="chev-link">O llámanos <span class="chev">›</span></a>
+            </div>
+          </form>
+
+          <div class="booking__done" id="bookingDone" hidden>
+            <p class="kicker">Reserva anotada</p>
+            <h3 class="t3d t3d--tile booking__title">¡Gracias!</h3>
+            <p id="bookingSummary"></p>
+            <p class="booking__small">Te confirmaremos por teléfono. Si tienes prisa, llámanos al <a href="tel:+34961725098">961 72 50 98</a>.</p>
+            <button type="button" class="paper-btn paper-btn--pill" id="bookingAgain">Hacer otra reserva</button>
+          </div>
+        </div>
+        <div class="paper__band paper__band--bottom"></div>
+      </div>
+
+      <div class="note note--booking reveal" aria-hidden="true">
+        <p>Cocina ininterrumpida de 8:00 a 23:30.<br>Menú del día de lunes a viernes.</p>
+      </div>
+    </section>
+
+    <!-- ===== CAPÍTULO 02 · CONTACTO ===== -->
+    <section id="contacto" class="stage stage--contact" data-chapter="03">
+      <div class="stage__bg stage__bg--parallax">
+        <div class="stage__sticky">
+          <img src="assets/paint-cullera.jpg" alt="" class="stage__paint">
+          <div class="stage__vignette stage__vignette--warm"></div>
+        </div>
+      </div>
+
+      <header class="stage__head">
+        <p class="kicker kicker--light reveal">Capítulo 03</p>
+        <h2 class="t3d t3d--cream stage__title" data-split>Contacto</h2>
+      </header>
+
+      <div class="contact__grid">
+        <div class="paper contact__card tilt-in">
+          <div class="paper__band paper__band--top"></div>
+          <div class="paper__inner">
+            <p class="kicker">Ven a vernos</p>
+            <h3 class="t3d t3d--tile contact__name" data-split>Cafetería Alcalá</h3>
+            <ul class="contact__list">
+              <li><span class="contact__label">Teléfono</span><a href="tel:+34961725098" class="contact__big">961 72 50 98</a></li>
+              <li><span class="contact__label">Dirección</span><a href="https://maps.google.com/?q=Calle+del+Pintor+Ferrer+Cabrera+3,+46400+Cullera" target="_blank" rel="noopener">C/ del Pintor Ferrer Cabrera, 3<br>46400 Cullera, Valencia</a></li>
+              <li><span class="contact__label">Horario</span><span>Todos los días · 8:00 – 23:30<br><small>Cocina ininterrumpida</small></span></li>
+              <li><span class="contact__label">Redes</span><span class="contact__social">
+                <a href="https://www.instagram.com/cafeteriaalcala" target="_blank" rel="noopener">@cafeteriaalcala</a>
+                <a href="https://www.facebook.com/cafeteria.alcala" target="_blank" rel="noopener">@cafeteria.alcala</a>
+                <a href="http://www.cafeteriaalcala.es" target="_blank" rel="noopener">cafeteriaalcala.es</a></span></li>
+            </ul>
+            <div class="contact__actions">
+              <a href="tel:+34961725098" class="paper-btn paper-btn--pill paper-btn--orange">Llamar</a>
+              <a href="https://maps.google.com/?q=Calle+del+Pintor+Ferrer+Cabrera+3,+46400+Cullera" target="_blank" rel="noopener" class="chev-link">Abrir en Maps <span class="chev">›</span></a>
+            </div>
+          </div>
+          <div class="paper__band paper__band--bottom"></div>
+        </div>
+
+        <div class="contact__side">
+          <div class="polaroid tilt-in" style="--rot:2.5deg">
+            <iframe title="Mapa de Cafetería Alcalá en Cullera"
+              src="https://www.google.com/maps?q=Calle+del+Pintor+Ferrer+Cabrera+3,+46400+Cullera,+Valencia&z=17&output=embed"
+              loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <p class="polaroid__cap">Estamos aquí</p>
+          </div>
+          <div class="polaroid tilt-in" style="--rot:-2deg">
+            <img src="assets/interior.webp" alt="Interior de Cafetería Alcalá">
+            <p class="polaroid__cap">Nuestro local, reformado</p>
+          </div>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <p>© <span id="year"></span> Cafetería Alcalá · Embrumar SLU · Cullera</p>
+        <a href="#inicio" data-nav class="chev-link chev-link--light">Volver al inicio <span class="chev chev--up">›</span></a>
+      </footer>
+    </section>
+
+  </main>
+
+  <script src="js/menu-data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
