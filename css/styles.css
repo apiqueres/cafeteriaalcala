@@ -168,7 +168,8 @@ iframe { border: 0; display: block; }
 @media (max-width: 640px) {
   .brand { top: 12px; left: 14px; } .brand__badge { width: 48px; height: 48px; } .brand__badge img { width: 36px; } .brand__text { display: none; }
   .menu-btn { top: 12px; right: 14px; } .call-btn { left: 14px; bottom: 14px; width: 54px; height: 54px; } .chapter-tag { right: 14px; bottom: 18px; }
-  .frame { opacity: .8; }
+  .frame { display: none; }
+  .stage { padding-left: .75rem; padding-right: .75rem; }
 }
 
 /* ==========================================================================
