@@ -72,6 +72,11 @@ iframe { border: 0; display: block; }
   box-shadow: 0 30px 60px -22px rgba(0,0,0,.65), inset 0 0 0 1px rgba(255,255,255,.12);
   border-radius: 6px;
 }
+.banner--bordeaux {
+  background-color: var(--bordeaux);
+  background-blend-mode: luminosity;
+  box-shadow: 0 30px 60px -22px rgba(0,0,0,.7), inset 0 0 0 1px rgba(255,255,255,.1), inset 0 0 120px rgba(60,0,10,.35);
+}
 .banner::after { content: ''; position: absolute; inset: 0; pointer-events: none; border-radius: inherit; background: linear-gradient(90deg, rgba(0,0,0,.18), transparent 12%, transparent 88%, rgba(0,0,0,.18)); }
 .banner__strip {
   height: 48px; border-radius: 6px 6px 0 0;
